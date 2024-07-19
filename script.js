@@ -3,6 +3,8 @@
     const baseURL = 'https://dummyjson.com/products'
     let products = []
     
+
+    // fetching data 
     const fetchData = async () => { 
         try {
             const response = await fetch( baseURL );
@@ -19,6 +21,7 @@
     
     fetchData();
     
+    // cards creation 
     function getCards(item) {
         const card = document.createElement('div');
         card.classList.add('card')
@@ -36,6 +39,7 @@
         return card
     };
 
+    // product search function 
     const searchProduct = async function() {     
         const input = document.querySelector('#search');
             try {
@@ -58,8 +62,8 @@
     }
 
 
+    // mapping data to cards 
     const generateView = async (productList) => {
-
 
         const cardsContainer = document.querySelector('.cards-container');
         cardsContainer.innerHTML = '';
@@ -69,7 +73,6 @@
                 const cards = getCards(item)
                 cardsContainer.appendChild(cards);
             });
-
 
     };
 
