@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product page</title>
+
+    <!-- icon set  -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- styles  -->
+    <link rel="stylesheet" href="./styles/root.css">
+</head>
+<body>
+    
+    <header class="top-bar">
+        <div>
+            <h2>Products</h2>
+        </div>
+        <div class="input-container">
+            <input id="search" type="text" class="input-bar">
+            <button onclick="searchProduct()" class="search-btn">Search</button>
+        </div>
+    </header>
+
+    <section>
+        <div class="filters-wrapper">
+            <button onclick="sortByPrice()" class="sort-btn">price low to high</button>
+        </div>
+        <main class="cards-container">
+            <!-- product cards goes here  -->
+        </main>
+    </section>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
